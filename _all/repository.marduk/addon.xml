@@ -5,9 +5,9 @@
 	</requires>
 	<extension name="Marduk's KODI repository" point="xbmc.addon.repository">
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/</datadir>
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/_all/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/_all/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/_all/</datadir>
 		</dir>
 		<dir maxversion="18.9.000">
 			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py2/addons.xml</info>
