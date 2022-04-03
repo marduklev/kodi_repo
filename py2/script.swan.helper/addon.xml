@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.04" provider-name="marduk">
+	<requires>
+		<import addon="xbmc.python" version="2.26.0" />
+	</requires>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="contextmenu/context_playlistcontainer_fn_minus.py">
+				<label>$LOCALIZE[13332]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu/context_playlistcontainer_fn_plus.py">
+				<label>$LOCALIZE[13333]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu/context_playlistcontainer_fn_delete.py">
+				<label>$LOCALIZE[15015]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu/context_playlist_queuing_insert.py">
+				<label>$LOCALIZE[10008]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="contextmenu/context_playlist_queuing_add.py">
+				<label>$LOCALIZE[13347]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="contextmenu/context_actions_playmedia_dir.py">
+				<label>$LOCALIZE[22083]</label>
+				<visible>[Window.IsMedia + Container.Content(Albums) + string.startswith(listitem.label, *)] | [!Window.IsMedia + [String.IsEqual(ListItem.DBtype,artist) | String.IsEqual(ListItem.DBtype,album)]]</visible>
+			</item>
+			<menu>
+				<label>$ADDON[script.swan.helper 32000]</label>
+				<item library="contextmenu/context_actions_open_playlist.py">
+					<label>$LOCALIZE[13350]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="contextmenu/context_actions_save_playlist.py">
+					<label>$LOCALIZE[190] $LOCALIZE[559]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="contextmenu/context_actions_open_playercontrol.py">
+					<label>$LOCALIZE[10114]</label>
+					<visible>!Window.IsActive(playercontrols) + [Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]]</visible>
+				</item>
+			</menu>
+		</menu>
+	</extension>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<!-- https://kodi.wiki/view/HOW-TO:Video_addon
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	-->
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">summary</summary>
+		<description lang="en_GB">description</description>
+		<news></news>
+		<source></source>
+		<forum></forum>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>

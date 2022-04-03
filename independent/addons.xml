@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <addons>
+<addon id="repository.fredsrepo" name="Sualfreds Repo" version="1.0.7" provider-name="sualfred">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Sualfreds Repo">
+		<dir>
+			<info compressed="false">https://repo.derfred.net/repositories/addons.xml</info>
+			<checksum>https://repo.derfred.net/repositories/addons.xml.md5</checksum>
+			<datadir zip="true">https://repo.derfred.net/repositories/</datadir>
+		</dir>
+		<dir minversion="17.9.0">
+			<info compressed="false">https://repo.derfred.net/leia/addons.xml</info>
+			<checksum>https://repo.derfred.net/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://repo.derfred.net/leia/</datadir>
+		</dir>
+		<dir minversion="16.9.0">
+			<info compressed="false">https://repo.derfred.net/krypton/addons.xml</info>
+			<checksum>https://repo.derfred.net/krypton/addons.xml.md5</checksum>
+			<datadir zip="true">https://repo.derfred.net/krypton/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Sualfreds Kodi repository</summary>
+		<description>Personal repository of Sualfred and home of the Embuary skin</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="repository.marcelveldt" version="1.0.3" name="Marcelveldt's BETA repository" provider-name="marcelveldt, finkleandeinhorn">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Marcelveldt's BETA repository">
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/</datadir>
+		</dir>
+		<dir minversion="18.9.700">
+			<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/matrix/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/matrix/</datadir>
+		</dir>
+		<dir maxversion="18.9.0">
+			<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/olderversions/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/olderversions/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/olderversions/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository for beta/test versions of Marcelveldt's addons</summary>
+		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="repository.marduk" name="Marduk's KODI repository" provider-name="marduk" version="1.0.8">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension name="Marduk's KODI repository" point="xbmc.addon.repository">
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/independent/</datadir>
+		</dir>
+		<dir maxversion="18.9.000">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py2/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/py2/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py2/</datadir>
+		</dir>
+		<dir minversion="18.9.701">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py3/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/py3/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py3/</datadir>
+		</dir>
+		<dir minversion="19.90.101">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/</datadir>
+		</dir>
+		<dir minversion="18.9.701" maxversion="19.90.000">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/matrix/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/matrix/</datadir>
+		</dir>
+		<dir minversion="17.9.910" maxversion="18.9.000">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/leia/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/leia/</datadir>
+		</dir>
+		<dir maxversion="17.6.000">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/krypton/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/krypton/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/krypton/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository - Home of Titan M O D and Skin S W A N</summary>
+		<description lang="en">Kodi repository - Home of Titan M O D and Skin S W A N</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="repository.rector.stuff" name="Rector Stuff" version="1.0.4" provider-name="rmrector">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Rector Repository">
+		<dir maxversion="18.9.0">
+			<info>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python2/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python2/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python2/</datadir>
+		</dir>
+		<dir minversion="18.9.700">
+			<info>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python3/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python3/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/rmrector/repository.rector.stuff/python3/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">A little place for my stuff.</summary>
+		<description lang="en">I'm Rector, I do stuff, I put it here.</description>
+		<platform>all</platform>
+		<disclaimer />
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+<addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.2">
+  <extension point="xbmc.addon.repository" name="SlyGuy Repository">
+    <dir>
+      <info compressed="false">https://k.slyguy.xyz/.repo/addons.xml</info>
+      <checksum>https://k.slyguy.xyz/.repo/addons.xml.md5</checksum>
+      <datadir zip="true">https://k.slyguy.xyz/.repo/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en">Addons by SlyGuy</description>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets> 
+  </extension>
+</addon>
+<addon id="resource.images.busyspinners.basic" name="Animated Busy Spinners Pack" version="1.0.5" provider-name="marcelveldt,marduk">
+	<extension point="kodi.resource.images" compile="false" type="busyspinners" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Animated Busy Spinners Pack - Titan</summary>
+		<description lang="en">Animated Busy Spinners Pack - Titan</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+<addon id="resource.images.skin.swan" name="Skin Swan Image Directory" version="1.0.04" provider-name="marduk">
+	<extension point="kodi.resource.images" compile="false" type="skinextras" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Swan Image Directory</summary>
+		<description lang="en">Skin Swan Image Directory - Provides Textures for the GUI (Backgrounds, Overlays, Icons)
+Additional Credits belongs to:
+'Phil65' (skin.estuary) (some backgroundpatterns)
+'Marcelveldt' , 'mgonzales71' (some backgroundpatterns from resource.images.backgroundoverlays.basic)
+'unsplash Users'  (some backgroundimages)
+</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+<addon id="resource.images.skinicons.whitesquare" name="Skin Icons - Square" version="0.0.2" provider-name="marduk">
+	<extension point="kodi.resource.images" compile="false" type="skinicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Icons Pack - Square</summary>
+		<description lang="en">Skin Icons Pack - Square</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+<addon id="resource.uisounds.swan" version="0.0.02" name="Swan UI Sounds" provider-name="marduk">
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="kodi.resource.uisounds"/>
+	<extension point="kodi.addon.metadata">
+		<summary lang="en_GB">Swan UI Sounds - SILENCIO</summary>
+		<description lang="en_GB">UI Sounds For KODI</description>
+		<platform>all</platform>
+		<source></source>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/icon.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+    </addons>

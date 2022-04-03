@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <addons>
+<addon id="repository.castagnait" name="CastagnaIT Repository for Kodi 19.x (MATRIX)" version="1.0.0" provider-name="castagnait">
+	<extension point="xbmc.addon.repository" name="CastagnaIT Repository">
+		<dir>
+			<info>https://github.com/CastagnaIT/repository.castagnait/raw/matrix/addons.xml</info>
+			<checksum>https://github.com/CastagnaIT/repository.castagnait/raw/matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://github.com/CastagnaIT/repository.castagnait/raw/matrix/zip</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>CastagnaIT Repository for Kodi 19.x (MATRIX)</summary>
+		<description>Castagna IT repository for Kodi 19.x add-ons</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.jpg</icon>
+		</assets>
+	</extension>
+</addon>
+<addon id="repository.sandmann79-py3.plugins" name="Sandmann79s Repository Matrix" version="1.0.0" provider-name="Sandmann79">
+	<extension point="xbmc.addon.repository" name="Sandmann79s Repository Matrix">
+		<info compressed="false">https://raw.githubusercontent.com/Sandmann79/xbmc/master/packages-py3/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Sandmann79/xbmc/master/packages-py3/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/Sandmann79/xbmc/master/packages-py3/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Various Addons for Kodi 19 and beyond</summary>
+		<description></description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+<addon id="script.metadata.editor" name="Metadata Editor" version="3.0.2" provider-name="sualfred">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" version="2.22.0+matrix.1" />
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="context.py">
+				<label>$ADDON[script.metadata.editor 32000]</label>
+				<visible>!String.IsEmpty(ListItem.DBID) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)]</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Metadata Editor Script</summary>
+		<summary lang="es_ES">Metadata Editor Script</summary>
+		<description lang="en_GB">Helper script to edit basic metadata information of library items with support to automatically update the .nfo file of movies, TV shows, episodes and music videos.</description>
+		<description lang="es_ES">Script de ayuda para editar información básica de metadatos de elementos de la biblioteca con soporte para actualizar automáticamente el archivo .nfo de películas, programas de televisión, episodios y vídeos musicales.</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=349035</forum>
+		<source>https://github.com/sualfred/script.metadata.editor</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="script.playlist.helper" name="Playlist Helper" version="0.0.07" provider-name="marduk">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="context_playlistcontainer_fn.py" args="minus">
+				<label>$LOCALIZE[13332]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="context_playlistcontainer_fn.py" args="plus">
+				<label>$LOCALIZE[13333]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="context_playlistcontainer_fn.py" args="delete">
+				<label>$LOCALIZE[15015]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="context_playlist_queuing.py" args="insert">
+				<label>$LOCALIZE[10008]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="context_playlist_queuing.py" args="add">
+				<label>$LOCALIZE[13347]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="context_actions.py" args="playmedia_dir">
+				<label>$LOCALIZE[22083]</label>
+				<visible>[Window.IsMedia + Container.Content(Albums) + string.startswith(listitem.label, *)] | [!Window.IsMedia + [String.IsEqual(ListItem.DBtype,artist) | String.IsEqual(ListItem.DBtype,album)]]</visible>
+			</item>
+			<menu>
+				<label>$ADDON[script.playlist.helper 32000]</label>
+				<item library="context_actions.py" args="open_playlist">
+					<label>$LOCALIZE[13350]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="context_actions.py" args="save_playlist">
+					<label>$LOCALIZE[190] $LOCALIZE[559]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="context_actions.py" args="open_playercontrol">
+					<label>$LOCALIZE[10114]</label>
+					<visible>!Window.IsActive(playercontrols) + [Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]]</visible>
+				</item>
+			</menu>
+		</menu>
+	</extension>
+	<extension point="xbmc.python.script" library="actions.py">
+        <provides>executable</provides>
+    </extension>
+	<extension point="kodi.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Enable Playlist Functions for Contextmenu which currently not provided by Kodi core and provides select Actions for Skinners</summary>
+		<description lang="en_GB">Enable Playlist Functions for Contextmenu which currently not provided by Kodi core and Provide select Actions for Skinners[CR]
+Contextmenu
+  • for skins, which use a dynamic container filled with currently playing playlist (playlistmusic:// ; playlistvideo://)
+     - switch playlistitems (move up or down)
+     - delete playlistitem
+
+  • play all songs by artist
+     - if either media window and on '. all albums' listitem entry, or if not media window for artist or album items (clears playlist, and start plaing folder)
+
+  • activate playlist window
+  • activate playercontrols dialog
+  • save currently active playlist
+
+
+Select Actions
+  • play selected Song if container filled with (playlistmusic:// ; playlistvideo://)
+  • conditional select actions for dynamic content containers in Custom Windows/Containers (directory or file)
+     - add to playlist as next title and play item (default ~ !Skin.HasSetting(&lt; dbtype &gt;_select_queue))
+     - add to playlist as next title (if Skin.HasSetting(&lt; dbtype &gt;_select_queue))
+
+</description>
+		<license>GPL-2.0-or-later</license>
+		<forum></forum>
+		<source>https://github.com/marduklev/script.playlist.helper</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.png</fanart>
+		</assets>
+	</extension>
+</addon>
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.2" provider-name="sualfred,marcelveldt">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.04" provider-name="marduk">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="contextmenu.py" args="playlistitem_fn,method=minus">
+				<label>$LOCALIZE[13332]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu.py" args="playlistitem_fn,method=plus">
+				<label>$LOCALIZE[13333]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu.py" args="playlistitem_fn,method=delete">
+				<label>$LOCALIZE[15015]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="contextmenu.py" args="queue,method=insert">
+				<label>$LOCALIZE[10008]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="contextmenu.py" args="queue,method=add">
+				<label>$LOCALIZE[13347]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="contextmenu.py" args="execute,method=playmedia_dir">
+				<label>$LOCALIZE[22083]</label>
+				<visible>[Window.IsMedia + Container.Content(Albums) + string.startswith(listitem.label, *)] | [!Window.IsMedia + [String.IsEqual(ListItem.DBtype,artist) | String.IsEqual(ListItem.DBtype,album)]]</visible>
+			</item>
+			<menu>
+				<label>$ADDON[script.swan.helper 32000]</label>
+				<item library="contextmenu.py" args="execute,method=open_playlist">
+					<label>$LOCALIZE[13350]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="contextmenu.py" args="execute,method=save_playlist">
+					<label>$LOCALIZE[190] $LOCALIZE[559]</label>
+					<visible>!Window.IsActive(MyPlaylist.xml) + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="contextmenu.py" args="execute,method=open_playercontrol">
+					<label>$LOCALIZE[10114]</label>
+					<visible>!Window.IsActive(playercontrols) + [Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]]</visible>
+				</item>
+			</menu>
+		</menu>
+	</extension>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<!-- https://kodi.wiki/view/HOW-TO:Video_addon
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	-->
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">summary</summary>
+		<description lang="en_GB">description</description>
+		<news></news>
+		<source></source>
+		<forum></forum>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+    </addons>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="context.playlist" name="ContextMenu Playlist Functions" version="0.0.05" provider-name="marduk">
+<!-- 
+<requires>
+ <import addon="xbmc.python" version="3.0.0"/>
+</requires>
+-->
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="pl_swap_minus.py">
+				<label>$LOCALIZE[13332]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="pl_swap_plus.py">
+				<label>$LOCALIZE[13333]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="pl_del.py">
+				<label>$LOCALIZE[15015]</label>
+				<visible>string.isequal(window(home).property(playlist_itemcontrol),enable)</visible>
+			</item>
+			<item library="fn_queue_next.py">
+				<label>$LOCALIZE[10008]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="fn_queue_end.py">
+				<label>$LOCALIZE[13347]</label>
+				<visible>!Window.IsMedia + [String.IsEqual(ListItem.dbtype,artist) | String.IsEqual(ListItem.dbtype,album) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,year) | String.IsEqual(ListItem.dbtype,originalyear) | String.IsEqual(ListItem.dbtype,genre)]</visible>
+			</item>
+			<item library="action_playall.py">
+				<label>$LOCALIZE[22083]</label>
+				<visible>[Window.IsMedia + Container.Content(Albums) + string.startswith(listitem.label, *)] | [!Window.IsMedia + [String.IsEqual(ListItem.DBtype,artist) | String.IsEqual(ListItem.DBtype,album)]]</visible>
+			</item>
+			<menu>
+				<label>$ADDON[context.playlist 32000]</label>
+				<item library="action_playprevious.py">
+					<label>$ADDON[context.playlist 32050]</label>
+					<visible>Player.HasMedia + MusicPlayer.Offset(-1).Exists</visible>
+				</item>
+				<item library="action_playnext.py">
+					<label>$ADDON[context.playlist 32051]</label>
+					<visible>Player.HasMedia + MusicPlayer.Offset(1).Exists</visible>
+				</item>
+				<item library="action_playlist.py">
+					<label>$LOCALIZE[13350]</label>
+					<visible>Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="fn_pl_save.py">
+					<label>$LOCALIZE[190] $LOCALIZE[559]</label>
+					<visible>Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+				<item library="action_playercontrol.py">
+					<label>$LOCALIZE[10114]</label>
+					<visible>Player.HasMedia + [MusicPlayer.Offset(-1).Exists | MusicPlayer.Offset(1).Exists]</visible>
+				</item>
+			</menu>
+		</menu>
+	</extension>
+	<extension point="kodi.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Enable Playlist Functions for Contextmenu which currently not provided by Kodi core</summary>
+		<description lang="en_GB">Enable Playlist Functions for Contextmenu which currently not provided by Kodi core[CR]such as ...
+• for skins, which use a dynamic container filled with currently playing playlist (playlistmusic:// ; playlistvideo://)
+    - switch playlistitems (move up/down)
+    - delete playlistitem
+
+• play all songs by artist
+     - if either media window and on '. all albums' listitem entry, or if not media window for artist or album items (clears playlist, and start plaing folder)
+
+• activate playlist window
+• activate playercontrols dialog
+• save currently active playlist
+• play next song
+• play previous song
+
+</description>
+		<license>GPL-2.0-or-later</license>
+		<forum />
+		<source />
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.png</fanart>
+		</assets>
+	</extension>
+</addon>

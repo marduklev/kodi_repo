@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="resource.images.skin.swan" name="Skin Swan Image Directory" version="1.0.04" provider-name="marduk">
+	<extension point="kodi.resource.images" compile="false" type="skinextras" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Swan Image Directory</summary>
+		<description lang="en">Skin Swan Image Directory - Provides Textures for the GUI (Backgrounds, Overlays, Icons)
+Additional Credits belongs to:
+'Phil65' (skin.estuary) (some backgroundpatterns)
+'Marcelveldt' , 'mgonzales71' (some backgroundpatterns from resource.images.backgroundoverlays.basic)
+'unsplash Users'  (some backgroundimages)
+</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>

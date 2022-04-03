@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="resource.uisounds.swan" version="0.0.02" name="Swan UI Sounds" provider-name="marduk">
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="kodi.resource.uisounds"/>
+	<extension point="kodi.addon.metadata">
+		<summary lang="en_GB">Swan UI Sounds - SILENCIO</summary>
+		<description lang="en_GB">UI Sounds For KODI</description>
+		<platform>all</platform>
+		<source></source>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/icon.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
