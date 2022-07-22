@@ -113,7 +113,7 @@ Select Actions
 		</assets>
 	</extension>
 </addon>
-<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.06" provider-name="marduk">
+<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.07" provider-name="marduk">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0" />
 	</requires>
