@@ -164,7 +164,7 @@ Select Actions
 		</assets>
 	</extension>
 </addon>
-<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.08" provider-name="marduk">
+<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.09" provider-name="marduk">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
