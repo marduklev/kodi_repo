@@ -10,7 +10,7 @@ for /d %%d in ("*") DO IF EXIST "%%d" (
 	echo ^<^?xml version^=^"1.0^" encoding^=^"UTF-8^" standalone=^"yes^"^?^>> "addons.xml"
 	echo     ^<addons^>>> "addons.xml"
 	FOR /r %%b in ("addon.xml") DO IF EXIST "%%b" (
-		type "%%~pbaddon.xml" | find /i /v "UTF-8" >> addons.xml
+		type "%%~pbaddon.xml" | find /i /v "?xml version" >> addons.xml
 	)
 	echo     ^</addons^>>> "addons.xml"
 	certutil -hashfile "addons.xml" md5 | find /i /v "md5" | find /i /v "certutil" > addons.xml.md5
