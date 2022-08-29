@@ -164,7 +164,7 @@ Select Actions
 		</assets>
 	</extension>
 </addon>
-<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.09" provider-name="marduk">
+<addon id="script.swan.helper" name="S W A N  helper scrips" version="0.0.10" provider-name="marduk">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 	</requires>
@@ -211,14 +211,8 @@ Select Actions
 			</menu>
 		</menu>
 	</extension>
-	<extension point="xbmc.python.script" library="default.py">
-		<provides>executable</provides>
-	</extension>
-	<!-- https://kodi.wiki/view/HOW-TO:Video_addon
-	<extension point="xbmc.python.pluginsource" library="plugin.py">
-		<provides>video</provides>
-	</extension>
-	-->
+	<extension point="xbmc.python.script" library="default.py" />
+	<extension point="xbmc.python.pluginsource" library="plugin.py" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">summary</summary>
 		<description lang="en_GB">description</description>
