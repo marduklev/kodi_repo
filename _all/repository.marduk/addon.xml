@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.marduk" name="Marduk's KODI repository" provider-name="marduk" version="1.0.8">
+<addon id="repository.marduk" name="Marduk's KODI repository" provider-name="marduk" version="1.0.9">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
@@ -19,7 +19,16 @@
 			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/py3/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/py3/</datadir>
 		</dir>
-		<dir minversion="19.90.101">
+			<!-- Leia 18.x 		2.26.0 (ABI 2.1.0) 	5.14.0 					9.7.2 (ABI 6.0.0) 	2.1.0 (ABI 1.0) 	17.9.910 (ABI 12.0.0) -->
+			<!-- Matrix 19.x 	3.0.0 (ABI 3.0.0) 	5.15.0 (ABI 5.14.0) 	11.2.0 (ABI 6.0.0) 	2.1.0 (ABI 1.0) 	19.1.0 (ABI 12.0.0) -->
+			<!-- Nexus 20.x 	3.0.1 (ABI 3.0.0) 	5.16.0 (ABI 5.15.0) 	13.0.0 (ABI 6.0.0) 	2.1.0 (ABI 1.0) 	20.90.101 (ABI 12.0.0)  -->
+			<!-- Omega 21.x 	3.0.1 (ABI 3.0.0) 	?	 				 	13.0.0 (ABI 6.0.0) 	2.1.0 (ABI 1.0) 	?  -->
+		<dir minversion="20.90.102">
+			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/omega/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/omega/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/omega/</datadir>
+		</dir>
+		<dir minversion="19.90.101" maxversion="20.90.101">
 			<info compressed="false">https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/marduklev/kodi_repo/main/nexus/</datadir>
